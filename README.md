@@ -1,11 +1,12 @@
 # SportsAPI
 
-The application fetches data from the ... API using Full Schedule 
+The application fetches data from the http://www.mysportsfeeds.com/ API using the Full Game schedule with Basic HTML Authorization.
 It can sort the results for Date, Status and Limit.
 There is an option for saving user (filter) settings in the localstorage and loading them if necessary.
-To run first install the node_modules in the terminal with the command (Node and npm required https://nodejs.org/en/).
+To run first install the node_modules in the terminal with the command:
+(Node and npm required https://nodejs.org/en/)
 
-npm i
+npm i   
 
 Then start the Node packager:
 
