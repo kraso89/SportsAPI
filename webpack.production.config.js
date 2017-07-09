@@ -6,9 +6,9 @@ var buildPath = path.resolve(__dirname, 'public', 'build');
 var mainPath = path.resolve(__dirname, 'src', 'index.js');
 
 var productionPlugin = new Webpack.DefinePlugin({
-  'process.env':{
-    'NODE_ENV': JSON.stringify('production')
-  }
+  // 'process.env':{
+  //   'NODE_ENV': JSON.stringify('production')
+  // }
 });
 
 
@@ -26,10 +26,11 @@ var config = {
   ],
   module: {
     loaders: [
-      { test: /\.js$/, loaders: ['babel'], include: __dirname + '/src/' },
-      { test: /\.jsx$/, loaders: ['babel'], include: __dirname + '/src/' },
+      { test: /\.js$/, loaders: ['babel-loader'], include: __dirname + '/src/' },
+      { test: /\.jsx$/, loaders: ['babel-loader'], include: __dirname + '/src/' },
+      // { test: /\.scss$/, loader: 'sass-loader', include: __dirname + '/src/'  },
       { test: /\.scss$/, loaders: ['style', 'css', 'sass'] },
-      { test: /\.css$/, loader: "style!css" }
+
     ]
   }
 };
